@@ -1,6 +1,9 @@
 import { Component } from 'react';
 import './App.css';
 import Header from './components/Header';
+import Navbar from './components/Navbar';
+import BookList from './containers/BookList';
+
 
 
 // function or class??  
@@ -11,19 +14,16 @@ import Header from './components/Header';
 
 class App extends Component {
 
-  state = {
-    BookAll:  [
-      {id: 1, title:"HP and SS", author: "JK RWL", image: "blahblhas.com"},
-      {id: 2, title:"HP and CS", author: "JK RWL", image: "blahblhas.com"},
-      {id: 3, title:"HP and PA", author: "JK RWL", image: "blahblhas.com"},
-      {id: 4, title:"HP and GF", author: "JK RWL", image: "blahblhas.com"},
-      {id: 5, title:"HP and OP", author: "JK RWL", image: "blahblhas.com"}
-    ]
-  }
+  state = {}
+
+  
   render() {
     return (
       <div>
           <Header/>
+          <Navbar/>
+          <BookList/>
+          
       </div>
     );
   }
