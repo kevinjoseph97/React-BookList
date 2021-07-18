@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import BookList from './containers/BookList';
+import BookNewForm from './containers/BookNewForm';
 
 
 
@@ -22,6 +23,12 @@ class App extends Component {
       <div>
           <Header/>
           <Navbar/>
+          <br></br>
+          <br></br>
+          <BookNewForm/>
+          <br></br>
+          <br></br>
+          <br></br>
           <BookList/>
           
       </div>

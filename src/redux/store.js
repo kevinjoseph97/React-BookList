@@ -10,7 +10,20 @@ const  BookAllFE =  [
 
 // actions are keeping track of functoins we use 
 function BookReducer(state= BookAllFE, action) {
+
+
+    const addNewBook = ()=> {
+        return{
+            ...action.payload
+        }
+    }
+
+
     switch(action.type){
+
+        case "ADD_BOOK":
+            // return copy of state and the new book added
+            return[...state, addNewBook()]
         
         default: 
             return state
@@ -19,7 +32,7 @@ function BookReducer(state= BookAllFE, action) {
 
 
 
-// create the store using book reducer 
+// create the store using book reducer // sp we can user stqte anywhere we need it 
 let store = createStore(BookReducer, 
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 export default store
