@@ -5,7 +5,6 @@ import BookItem from './BookItem'
 import { connect } from 'react-redux'
 
 
-// suse props from the global store
 function BookList(props) {
 
      const allBooks = props.reduxBooks.map( (book) =>{

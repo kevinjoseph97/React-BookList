@@ -1,4 +1,5 @@
 import { createStore } from 'redux'
+import BookItem from '../containers/BookItem'
 
 const  BookAllFE =  [
     {id: 1, title:"HP and SS", author: "JK RWL", image: "blahblhas.com"},
@@ -11,8 +12,15 @@ const  BookAllFE =  [
 // actions are keeping track of functoins we use 
 function BookReducer(state= BookAllFE, action) {
 
-
+    // mapping back to action 
     const addNewBook = ()=> {
+        return{
+            ...action.payload
+        }
+    }
+
+
+    const deleteBook = ()=> {
         return{
             ...action.payload
         }
@@ -24,6 +32,11 @@ function BookReducer(state= BookAllFE, action) {
         case "ADD_BOOK":
             // return copy of state and the new book added
             return[...state, addNewBook()]
+
+        case "DELETE_BOOK":
+            let currentBooks  = state.filter( (BookItem)=> BookItem !== action.payload )
+            return [...currentBooks]
+
         
         default: 
             return state

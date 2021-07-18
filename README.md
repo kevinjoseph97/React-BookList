@@ -2,7 +2,7 @@ BookList
 Welcome to your own personal list of books to read. This is a fast and convenient way to keep track of all the books you want to read at a given time.
 
 Installation
-To See the Backend repo click -> BackEnd Repo
+To See the Backend repo click -> https://github.com/kevinjoseph97/BookList-backend
 
 run bundle install 
 run rails db:migrate
